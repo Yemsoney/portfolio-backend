@@ -13,3 +13,5 @@ use App\Http\Controllers\Api\ProjectApiController;
 
 Route::get('/projects', [ProjectApiController::class, 'index']);
 Route::get('/projects/{project}', [ProjectApiController::class, 'show']);
+Route::post('/projects', [ProjectApiController::class, 'store']);
+Route::put('/projects/{project}', [ProjectApiController::class, 'update']);

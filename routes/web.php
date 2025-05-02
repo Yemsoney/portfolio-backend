@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 // Protected project routes
 Route::middleware(['auth'])->group(function () {
     Route::resource('projects', ProjectController::class);
