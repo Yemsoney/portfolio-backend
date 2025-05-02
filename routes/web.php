@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 // Authentication routes (created by Laravel's auth scaffolding)
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Protected project routes
 Route::middleware(['auth'])->group(function () {
